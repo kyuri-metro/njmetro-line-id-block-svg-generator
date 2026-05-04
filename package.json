@@ -1,0 +1,44 @@
+{
+  "name": "@kyuri-metro/njmetro-line-id-block-svg-generator",
+  "version": "0.1.0",
+  "description": "kyuri-metro 组织下的南京地铁线路号方块 SVG 生成器。",
+  "type": "module",
+  "author": "Unnamed2964",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/issues"
+  },
+  "homepage": "https://njmetro-line-id-block-generator-v2.umamichi.moe/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@kyuri-metro/njmetro-palette": "^0.1.0"
+  }
+}
