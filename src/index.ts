@@ -38,7 +38,7 @@ type SupportedBadgeTemplate =
 const BASE_HEIGHT = 1000
 const FALLBACK_BACKGROUND = '#666666'
 const FALLBACK_FOREGROUND = '#000000'
-const DEFAULT_FONT_FAMILY = 'Helvetica, "Helvetica Neue", Arial, "Segoe UI", sans-serif'
+export const DEFAULT_LINE_ID_BLOCK_FONT_FAMILY = 'Arial, Helvetica, sans-serif'
 
 function escapeXml(value: string) {
   return value
@@ -80,7 +80,7 @@ function getBadgePalette(template: SupportedBadgeTemplate, foreground?: string, 
   }
 }
 
-function getLineIdBlockWidth(lineNumber: NjMetroLineId, height = 100) {
+export function getLineIdBlockWidth(lineNumber: NjMetroLineId, height = 100) {
   const template = resolveBadgeTemplate(lineNumber)
 
   if (!template) {
@@ -92,7 +92,7 @@ function getLineIdBlockWidth(lineNumber: NjMetroLineId, height = 100) {
 
 export function generateLineIdBlockSvg({
   background,
-  fontFamily = DEFAULT_FONT_FAMILY,
+  fontFamily = DEFAULT_LINE_ID_BLOCK_FONT_FAMILY,
   foreground,
   height = 100,
   lineNumber,
