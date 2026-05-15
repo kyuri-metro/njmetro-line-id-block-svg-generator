@@ -1,6 +1,6 @@
 {
   "name": "@kyuri-metro/njmetro-line-id-block-svg-generator",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "kyuri-metro 组织下的南京地铁线路号方块 SVG 生成器。",
   "type": "module",
   "author": "Unnamed2964",
