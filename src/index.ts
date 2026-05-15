@@ -113,10 +113,10 @@ export function generateLineIdBlockSvg({
     case 'n':
       return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="75" y="850" transform="scale(0.73,1)">${escapeXml(template.digit)}</text></svg>`
     case '11':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="535" y="850" transform="scale(0.95,1)">1</text><text style="${textStyle1000}" x="85" y="850" transform="scale(0.95,1)">1</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="519" y="850" transform="scale(0.95,1)">1</text><text style="${textStyle1000}" x="85" y="850" transform="scale(0.95,1)">1</text></svg>`
     case '1n':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="75" y="850" transform="scale(0.73,1)">1</text><text style="${textStyle1000}" x="650" y="850" transform="scale(0.73,1)">${escapeXml(template.digit)}</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="57" y="850" transform="scale(0.77,1)">1</text><text style="${textStyle1000}" x="610" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
     case 'Sn':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle950}" x="58" y="840" transform="scale(0.81,1)">S</text><text style="${textStyle1000}" x="760" y="850" transform="scale(0.73,1)">${escapeXml(template.digit)}</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle950}" x="58" y="840" transform="scale(0.81,1)">S</text><text style="${textStyle1000}" x="724" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
   }
 }

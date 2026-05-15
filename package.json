@@ -11,6 +11,7 @@
     "dist",
     "src",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "repository": {
