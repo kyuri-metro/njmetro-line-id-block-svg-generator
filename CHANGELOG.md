@@ -4,6 +4,15 @@
 
 > 以下内容可能部分为 LLM 生成，但都经过人工检查，你可以信任它们
 
+## [0.2.2] - 2026-05-20
+
+### Added
+
+- 新增 **mn** 模板（`lineNumber: 20`–`99`）：十位数字 `m >= 2`、个位 `n`，宽高与 `1n`/`Sn` 同为 1000×1000。
+  - **说明**：mn 模板仅由 **1n** 模板整体水平平移得出（左位 `57→100`、右位 `610→653`，各 +43），**没有现实依据**，仅为占位用伪稿；参考见 [njmetro-railmap-creator `docs/badges/20260520`](https://github.com/kyuri-metro/njmetro-railmap-creator/tree/main/docs/badges/20260520)。
+  - 十位：`x=100`，`y=850`，`scale(0.77,1)`
+  - 个位：`x=653`，`y=850`，`scale(0.77,1)`
+
 ## [0.2.1] - 2026-05-16
 
 修正发布包前未先 npm run build 的发包错误

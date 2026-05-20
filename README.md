@@ -57,3 +57,5 @@ const svg = generateLineIdBlockSvg({
 ## 参考资料
 
 见 https://github.com/kyuri-metro/njmetro-railmap-creator/tree/main/docs。
+
+**mn**（`20`–`99`）模板无实物依据，仅由 **1n** 坐标水平平移（+43）得到的占位排版；伪稿与说明见 [njmetro-railmap-creator `docs/badges/20260520`](https://github.com/kyuri-metro/njmetro-railmap-creator/tree/main/docs/badges/20260520)。

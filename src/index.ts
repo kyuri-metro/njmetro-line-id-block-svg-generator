@@ -34,6 +34,14 @@ type SupportedBadgeTemplate =
       digit: string
       paletteKey: NjMetroLineId
     }
+  /** Pseudo layout: horizontal shift of 1n only (+43 on both digit x); no field reference. */
+  | {
+      kind: 'mn'
+      width: number
+      tens: string
+      ones: string
+      paletteKey: NjMetroLineId
+    }
 
 const BASE_HEIGHT = 1000
 const FALLBACK_BACKGROUND = '#666666'
@@ -62,6 +70,16 @@ function resolveBadgeTemplate(lineNumber: NjMetroLineId): SupportedBadgeTemplate
 
   if (/^1\d$/.test(lineString)) {
     return { kind: '1n', width: 1000, digit: lineString[1], paletteKey: Number(lineString) }
+  }
+
+  if (/^[2-9]\d$/.test(lineString)) {
+    return {
+      kind: 'mn',
+      width: 1000,
+      tens: lineString[0],
+      ones: lineString[1],
+      paletteKey: Number(lineString),
+    }
   }
 
   if (/^S[0-9]$/.test(lineString)) {
@@ -118,5 +136,8 @@ export function generateLineIdBlockSvg({
       return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="57" y="850" transform="scale(0.77,1)">1</text><text style="${textStyle1000}" x="610" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
     case 'Sn':
       return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle950}" x="58" y="840" transform="scale(0.81,1)">S</text><text style="${textStyle1000}" x="724" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
+    // mn: 1n coords shifted by +43 (57→100, 610→653); placeholder until measured from real badges
+    case 'mn':
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="100" y="850" transform="scale(0.77,1)">${escapeXml(template.tens)}</text><text style="${textStyle1000}" x="653" y="850" transform="scale(0.77,1)">${escapeXml(template.ones)}</text></svg>`
   }
 }
