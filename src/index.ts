@@ -135,7 +135,7 @@ export function generateLineIdBlockSvg({
     case '1n':
       return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="57" y="850" transform="scale(0.77,1)">1</text><text style="${textStyle1000}" x="610" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
     case 'Sn':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle950}" x="58" y="840" transform="scale(0.81,1)">S</text><text style="${textStyle1000}" x="724" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle950}" x="43" y="840" transform="scale(0.81,1)">S</text><text style="${textStyle1000}" x="700" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
     // mn: 1n coords shifted by +43 (57→100, 610→653); placeholder until measured from real badges
     case 'mn':
       return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="100" y="850" transform="scale(0.77,1)">${escapeXml(template.tens)}</text><text style="${textStyle1000}" x="653" y="850" transform="scale(0.77,1)">${escapeXml(template.ones)}</text></svg>`
