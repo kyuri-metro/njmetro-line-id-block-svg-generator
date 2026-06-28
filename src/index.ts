@@ -129,7 +129,7 @@ export function generateLineIdBlockSvg({
 
   switch (template.kind) {
     case 'n':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="80.5" y="850" transform="scale(0.73,1)">${escapeXml(template.digit)}</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="64" y="850" transform="scale(0.73,1)">${escapeXml(template.digit)}</text></svg>`
     case '11':
       return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="519" y="850" transform="scale(0.95,1)">1</text><text style="${textStyle1000}" x="72.5" y="850" transform="scale(0.95,1)">1</text></svg>`
     case '1n':

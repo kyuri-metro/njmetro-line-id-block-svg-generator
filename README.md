@@ -58,4 +58,4 @@ const svg = generateLineIdBlockSvg({
 
 见 https://github.com/kyuri-metro/njmetro-railmap-creator/tree/main/docs。
 
-排版参考 [njmetro-railmap-creator `docs/lineid block (FZHei)/`](https://github.com/kyuri-metro/njmetro-railmap-creator/tree/main/docs/lineid%20block%20(FZHei))（FZHei-B01 数字）。**mn**（`20`–`99`）为占位伪稿，见同目录 `mn_pesudo.svg`。
+排版参考 [njmetro-railmap-creator `docs/lineid block (FZHei)/`](https://github.com/kyuri-metro/njmetro-railmap-creator/tree/main/docs/lineid%20block%20(FZHei))（FZHei-B01 数字）。**mn**（`20`–`99`）仍为占位伪稿，见同目录 `mn_pesudo.svg`。

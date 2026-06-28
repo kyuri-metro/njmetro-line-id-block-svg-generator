@@ -4,6 +4,12 @@
 
 > 以下内容可能部分为 LLM 生成，但都经过人工检查，你可以信任它们
 
+## [0.3.1] - 2026-06-28
+
+### Changed
+
+- **n**（`0`–`9`）：个位 `x` 80.5→64，与 [njmetro-railmap-creator `docs/lineid block (FZHei)/n.svg`](https://github.com/kyuri-metro/njmetro-railmap-creator/blob/main/docs/lineid%20block%20(FZHei)/n.svg) 一致。
+
 ## [0.3.0] - 2026-06-28
 
 ### Changed
@@ -15,6 +21,7 @@
 - **1n**（`12`–`19`）：「1」/ 个位 `x` 57/610→54.5/605。
 - **Sn**（`S0`–`S9`）：「S」`x/y/font-size` 43/840/950→57/846/960；个位 `x` 700→708。
 - **mn**（`20`–`99`）：十位 / 个位 `x` 100/653→106.5/657。
+- 数字水平缩放仍写在 `<text transform="scale(…,1)">` 上（与旧版输出形式一致）。
 
 ### 说明
 
@@ -75,6 +82,7 @@
 
 - 初始发布：`generateLineIdBlockSvg`、`getLineIdBlockWidth`；支持 `0`–`9`、`11`、`12`–`19`、`S0`–`S9` 线路号方块 SVG 生成。
 
+[0.3.1]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.2.3...v0.3.0
 [0.2.3]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.2.2...v0.2.3
 [0.2.0]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.1.1...v0.2.0
