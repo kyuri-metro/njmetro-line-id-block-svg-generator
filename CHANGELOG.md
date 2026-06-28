@@ -4,6 +4,23 @@
 
 > 以下内容可能部分为 LLM 生成，但都经过人工检查，你可以信任它们
 
+## [0.3.0] - 2026-06-28
+
+### Changed
+
+- 全部模板排版改以 [njmetro-railmap-creator `docs/lineid block (FZHei)/`](https://github.com/kyuri-metro/njmetro-railmap-creator/tree/main/docs/lineid%20block%20(FZHei)) 为参考（FZHei-B01 数字坐标）。
+- 默认 `fontFamily` 由 `Arial, Helvetica, sans-serif` 改为 `FZHei-B01, Helvetica, sans-serif`。
+- **n**（`0`–`9`）：个位 `x` 75→80.5。
+- **11**：左侧「1」`x` 85→72.5。
+- **1n**（`12`–`19`）：「1」/ 个位 `x` 57/610→54.5/605。
+- **Sn**（`S0`–`S9`）：「S」`x/y/font-size` 43/840/950→57/846/960；个位 `x` 700→708。
+- **mn**（`20`–`99`）：十位 / 个位 `x` 100/653→106.5/657。
+
+### 说明
+
+- 公共 API 未变。
+- 若下游仍传入 Helvetica 字体栈，视觉将与参考稿不一致；请改用 FZHei-B01 或省略 `fontFamily` 使用新默认。
+
 ## [0.2.3] - 2026-05-23
 
 ### Changed
@@ -58,6 +75,7 @@
 
 - 初始发布：`generateLineIdBlockSvg`、`getLineIdBlockWidth`；支持 `0`–`9`、`11`、`12`–`19`、`S0`–`S9` 线路号方块 SVG 生成。
 
+[0.3.0]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.2.3...v0.3.0
 [0.2.3]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.2.2...v0.2.3
 [0.2.0]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/kyuri-metro/njmetro-line-id-block-svg-generator/compare/v0.1.0...v0.1.1

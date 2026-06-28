@@ -34,7 +34,7 @@ type SupportedBadgeTemplate =
       digit: string
       paletteKey: NjMetroLineId
     }
-  /** Pseudo layout: horizontal shift of 1n only (+43 on both digit x); no field reference. */
+  /** Pseudo layout: horizontal shift of 1n only (+52 on both digit x); no field reference. */
   | {
       kind: 'mn'
       width: number
@@ -46,7 +46,7 @@ type SupportedBadgeTemplate =
 const BASE_HEIGHT = 1000
 const FALLBACK_BACKGROUND = '#666666'
 const FALLBACK_FOREGROUND = '#000000'
-export const DEFAULT_LINE_ID_BLOCK_FONT_FAMILY = 'Arial, Helvetica, sans-serif'
+export const DEFAULT_LINE_ID_BLOCK_FONT_FAMILY = 'FZHei-B01, Helvetica, sans-serif'
 
 function escapeXml(value: string) {
   return value
@@ -124,20 +124,19 @@ export function generateLineIdBlockSvg({
   const width = getLineIdBlockWidth(lineNumber, height) ?? 0
   const palette = getBadgePalette(template, foreground, background)
   const textStyle1000 = `font-size:1000px;font-family:${escapeXml(fontFamily)};fill:${escapeXml(palette.foreground)}`
-  const textStyle950 = `font-size:950px;font-family:${escapeXml(fontFamily)};fill:${escapeXml(palette.foreground)}`
+  const textStyle960 = `font-size:960px;font-family:${escapeXml(fontFamily)};fill:${escapeXml(palette.foreground)}`
   const rect = `<rect width="${template.width}" height="${BASE_HEIGHT}" fill="${escapeXml(palette.background)}" />`
 
   switch (template.kind) {
     case 'n':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="75" y="850" transform="scale(0.73,1)">${escapeXml(template.digit)}</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="80.5" y="850" transform="scale(0.73,1)">${escapeXml(template.digit)}</text></svg>`
     case '11':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="519" y="850" transform="scale(0.95,1)">1</text><text style="${textStyle1000}" x="85" y="850" transform="scale(0.95,1)">1</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="519" y="850" transform="scale(0.95,1)">1</text><text style="${textStyle1000}" x="72.5" y="850" transform="scale(0.95,1)">1</text></svg>`
     case '1n':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="57" y="850" transform="scale(0.77,1)">1</text><text style="${textStyle1000}" x="610" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="54.5" y="850" transform="scale(0.77,1)">1</text><text style="${textStyle1000}" x="605" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
     case 'Sn':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle950}" x="43" y="840" transform="scale(0.81,1)">S</text><text style="${textStyle1000}" x="700" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
-    // mn: 1n coords shifted by +43 (57→100, 610→653); placeholder until measured from real badges
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle960}" x="57" y="846" transform="scale(0.81,1)">S</text><text style="${textStyle1000}" x="708" y="850" transform="scale(0.77,1)">${escapeXml(template.digit)}</text></svg>`
     case 'mn':
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="100" y="850" transform="scale(0.77,1)">${escapeXml(template.tens)}</text><text style="${textStyle1000}" x="653" y="850" transform="scale(0.77,1)">${escapeXml(template.ones)}</text></svg>`
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${template.width} ${BASE_HEIGHT}">${rect}<text style="${textStyle1000}" x="106.5" y="850" transform="scale(0.77,1)">${escapeXml(template.tens)}</text><text style="${textStyle1000}" x="657" y="850" transform="scale(0.77,1)">${escapeXml(template.ones)}</text></svg>`
   }
 }
